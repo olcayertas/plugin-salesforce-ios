@@ -1,0 +1,13 @@
+{
+    "typeIdentifier": 1111,
+    "refString": "",
+    "mainClasses": [
+        {
+            "class": "SMFSFManager",
+            "isView": false,
+        }
+    ],
+    "systemFrameworks": [
+
+    ]
+}

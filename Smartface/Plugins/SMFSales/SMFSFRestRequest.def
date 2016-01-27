@@ -1,0 +1,13 @@
+{
+    "typeIdentifier": 6666,
+    "refString": "",
+    "mainClasses": [
+        {
+            "class": "SMFSFRestRequest”,
+            "isView": false,
+        }
+    ],
+    "systemFrameworks": [
+
+    ]
+}

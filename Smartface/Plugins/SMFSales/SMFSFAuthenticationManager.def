@@ -1,0 +1,13 @@
+{
+    "typeIdentifier": 5555,
+    "refString": "",
+    "mainClasses": [
+        {
+            "class": "SMFSFAuthenticationManager”,
+            "isView": false,
+        }
+    ],
+    "systemFrameworks": [
+
+    ]
+}

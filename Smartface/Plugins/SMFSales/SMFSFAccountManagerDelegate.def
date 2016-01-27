@@ -1,0 +1,13 @@
+{
+    "typeIdentifier": 4444,
+    "refString": "",
+    "mainClasses": [
+        {
+            "class": "SMFSFAccountManagerDelegate”,
+            "isView": false,
+        }
+    ],
+    "systemFrameworks": [
+
+    ]
+}

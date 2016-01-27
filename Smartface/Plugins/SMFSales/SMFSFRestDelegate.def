@@ -1,0 +1,13 @@
+{
+    "typeIdentifier": 2222,
+    "refString": "",
+    "mainClasses": [
+        {
+            "class": "SMFSFRestDelegate",
+            "isView": false,
+        }
+    ],
+    "systemFrameworks": [
+
+    ]
+}
