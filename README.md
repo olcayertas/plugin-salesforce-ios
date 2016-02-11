@@ -174,10 +174,10 @@ You can find more example usage about properties and functions in sf.js file.
 
 
 # Author
- Smartface
+ Smartface inc.
 
 # License
-Smartface SalesForce iOS Plugin is used SalesForce SDK. You can check LICENSE.md
+Smartface SalesForce iOS Plugin used SalesForce SDK. You can check LICENSE.md
 
 
 
