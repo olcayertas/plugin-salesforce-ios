@@ -13,6 +13,94 @@ This is Smartface Salesforce plugin based on SalesForce Native iOS SDK. You can 
 * Authentication with Webview.
 * Using SalesforceRestAPI.
 
+#### Contructor
+You can create SalesForce Manager Constructor as ;
+```javascript
+var SFSDKManager = new SMFSFManager();
+```
+
+#### Set ConnectedAppId Property
+ConnectedAppId is a value that Salesforce created for you to use in app.
+```javascript
+    SFSDKManager.connectedAppId = "3MVG9FS3IyroMOh4nubHUj9SXAs1i6qwY8KhK6bsE6WmX3g9vrNsjA1CGgUsdasdasdfdsfsdfsdfqqww";
+```
+
+#### Set connectedAppCallbackUri Property
+ConnectedAppCallbackUri is a uri that Salesforce uses for communication.
+```javascript
+    SFSDKManager.connectedAppCallbackUri = "test://test"; 
+```
+
+#### Set authScopes Property
+AuthScopes is an array that includes what the application will use.
+
+```Javascript
+    SFSDKManager.authScopes = ["web", "api"];
+```
+
+#### launch Function
+This will show webview to authenticate with User email and Password.
+
+```Javascript
+    SFSDKManager.launch();
+```
+
+#### SMFPostLaunchAction Event
+After logging successfully this event will be triggered.
+```Javascript
+    SFSDKManager.SMFPostLaunchAction = function(e) {
+        /**** after login action is successful ****/
+    };
+```
+
+#### SMFLaunchErrorAction Event
+If there is an error while authenticating ;
+```Javascript
+    SFSDKManager.SMFLaunchErrorAction = function(e) {
+        /****  when authentication error occurs ****/
+    };
+```
+
+#### SFRestAPI Object
+SFRestApi is used to send request and to get response with delegate methods. You can call sharedInstance as;
+```Javascript
+    var restApi = SFRestAPI.sharedInstance();
+```
+
+#### SFRestRequest Object
+You can use this class as request object. SFRestAPI creates SFRestRequest object as ;
+```Javascript
+    var restRequest = restApi.requestForQuery(query);
+```
+
+#### SMFSFRestDelegate Object
+Events are handled with this class methods. You can create as ;
+```Javascript
+var reqDelegate = new SMFSFRestDelegate();
+```
+
+#### SMFSFRestDelegate onSuccess Event
+This event is trigerred after a successfull request ;
+```Javascript
+    reqDelegate.onSuccess = function(e) {
+    
+    }
+```Javascript
+
+#### SMFSFRestDelegate onFail Event
+If there is an error after request ;
+```Javascript
+    reqDelegate.onFail = function(e) {
+    
+    }
+```Javascript
+
+#### SFRestAPI sendDelegate Method
+You can send request by this method. Takes two parameters request and delegate
+```Javascript
+    restApi.sendDelegate(restRequest, reqDelegate);
+```
+
 
 # Plugin Initialization for Smartface
 
@@ -27,12 +115,9 @@ You can authenticate with Salesforce and You can send request. Example ;
 
 var SFSDKManager = new SMFSFManager();
 
-    SFSDKManager.connectedAppId = "3MVG9FS3IyroMOh4nubHUj9SXAs1i6qwY8KhK6bsE6WmX3g9vrNsjA1CGgUjDpXjoxa0YKSF0kyxUh0scH3fn"; /*** salesforce.com daki olusturdugunuz appId - string ***/
-    //"3MVG9KI2HHAq33Rxa66R9QnuzX1mjp4o.jTY4owVtxO7IqWmudjw7Q8m8xfNwN2t1nkSmUy1DU0mwAH9Urry7";
+    SFSDKManager.connectedAppId = "3MVG9FS3IyroMOh4nubHUj9SXAs1i6qwY8KhK6bsE6WmX3g9vrNsjA1CGgUsdasdasdfdsfsdfsdfqqww";
 
-
-    SFSDKManager.connectedAppCallbackUri = "sfdc://success"; /*** salesforce.com daki olusturdugunuz app callback url - string ***/
-
+    SFSDKManager.connectedAppCallbackUri = "test://test"; 
 
     SFSDKManager.authScopes = ["web", "api"];
 
