@@ -85,7 +85,7 @@ This event is trigerred after a successfull request ;
     reqDelegate.onSuccess = function(e) {
     
     }
-```Javascript
+```
 
 #### SMFSFRestDelegate onFail Event
 If there is an error after request ;
@@ -93,7 +93,7 @@ If there is an error after request ;
     reqDelegate.onFail = function(e) {
     
     }
-```Javascript
+```
 
 #### SFRestAPI sendDelegate Method
 You can send request by this method. Takes two parameters request and delegate
